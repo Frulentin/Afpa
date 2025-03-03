@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'HARD_ROCK';
+    src: url('../fonts/HARD_ROCK.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TheDark';
+    src: url('../fonts/TheDark.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'rocknroll_typo_crazy';
+    src: url('../fonts/rocknroll_typo_crazy.ttf') format('truetype');
+}
+
+body {
+        height: 100vh;
+        background: linear-gradient(-60deg, black 33.33%, red 66.66%, black 66.66%, black 100%);
+}
+
+section {
+    padding-top: 80px;
+}
+
+.fas.fa-bolt {
+    color: #b7211c;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+ 
+h1 {
+    font-family: 'TheDark', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.btn {
+    font-family: 'rocknroll_typo_crazy', sans-serif;
+    color:white;
+    font-size: 1.2em;
+}
+
+.navbar {
+    font-family: 'TheDark', sans-serif;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #b7211c;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+
+.navbar-brand {
+    font-family: 'TheDark', sans-serif;
+    color: white;
+    font-size: 2.1875rem;
+    text-transform: uppercase;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.membres-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.25rem;
+}
+
+.membre {
+    text-align: center;
+    width: 300px;
+}
+
+.vignette {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: 4px solid #ffffff;
+}
+
+figcaption {
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+#concerts {
+    padding: 20px;
+    text-align: center;
+}
+
+#concerts th {
+   
+    color: #b7211c;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+td:hover {
+    background: rgb(55, 59, 62);;
+}
+
+#contact {
+    padding: 20px;
+    text-align: center;
+}
+
+
+#contact .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+#contact .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+#contact .form-floating {
+    margin-bottom: 15px;
+}
+
+#contact .form-control {
+    font-family: 'HARD_ROCK', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+#contact .form-control::placeholder {
+    font-family: 'HARD_ROCK', sans-serif;
+    color: red;
+    opacity: 5;
+}
+
+#contact .form-control:focus {
+    border-color: #b7211c;
+    box-shadow: 0 0 5px rgba(183, 33, 28, 0.5);
+}
+
+#contact .btn {
+    font-family: 'rocknroll_typo_crazy', sans-serif;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact .btn-container {
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#contact .btn-primary {
+    background-color: red;
+    color: white;
+}
+
+#contact .btn-secondary {
+    background-color: red;
+    color: white;
+}
+
