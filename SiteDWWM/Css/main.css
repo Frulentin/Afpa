@@ -1,0 +1,254 @@
+/*....................................................Pour toute les pages...............................................................*/
+body{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+/*....................................................NAV............................................*/
+header{
+    display: flex;
+    align-items: center;
+}
+nav{
+    background-color:  #44A33D;
+    width: 100%;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    display: inline-block;  
+}
+ul li:not(.exclu){
+    border-right: solid white 2px;
+}
+ul li a{
+    text-decoration: none;
+    background-color: #87BB34;
+    color: white;
+    font-size: 22px;
+    font-family: cursive;
+    padding: 0.4em;
+}    
+header img{
+    float: left;
+    width: 250px;
+}
+header::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*........................................Fin Nav..............................................................*/
+main{
+    background-image: url(../Images/A3-1920.jpg);
+    height: 110vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+h1{
+    color: white;
+    text-align: center;
+    background-color: #44A33D;
+    width: 70%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 0.5em;
+    font-size: 30px;
+}
+/*.............................................Fin du pour tout.....................................................*/
+/*................................................accueil...........................................................*/
+h2{
+    color: white;
+    background-color: #44A33D;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em;
+    margin-top: 1.8em;
+    font-size: 30px;
+    border-radius: 15px;
+}
+.container{
+    overflow: hidden;
+    text-align: center;
+    background-color: grey;
+    opacity: 0.9;
+    width: 65%;
+    height: auto;
+    margin-top: 6%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+.container> a{
+    font-size: 26px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    background-color: red;
+    width: 63%;
+    margin-top: 1.8em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+/*.............................................css formation...........................................................*/
+.form{
+    display: flex;
+    gap: 20px;
+}
+.rubriqueFormation{
+    border: solid 2px pink;
+    margin: 0.8em;
+    padding: 1em;
+}
+.colFormation{
+    flex: 1;
+    background-color: rgb(161, 162, 163);
+    opacity: 0.9;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 15px;
+}
+.rubriqueFormation-Titre{
+    background-color: #44A33D;
+    color: white;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    padding: 0.3em;
+    font-size: 22px;
+}
+.rubriqueFormation-Description{
+    color: white;
+}
+/*...............................................témoignages..........................................................*/
+.temoignages{
+    display: flex;
+    gap: 15px;
+    margin-top: 3em;
+}
+.carte-temoignage{
+    background-color: rgb(161, 162, 163);
+    flex: 1;
+    padding: 1em;
+    text-align: center;
+    border-radius: 15px;
+    margin: 0.5em;
+}
+.carte-temoignage-photo{
+    text-align: center;
+    width: 40%;
+    height: 22%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    background-color: white;
+    border: solid 2px rgb(113, 11, 82);
+}
+.carte-temoignage-photo>img{
+    width: 100%;
+    height: 100%;
+}
+.carte-temoignage-message{
+    text-align: center;
+    text-align: justify;
+    color: white;
+}
+.carte-temoignage-nom{
+    margin: 0.7em;
+    background-color: #44A33D;
+    width: 46%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    padding: 0.3em;
+    color: white;
+    font-size: 20px;
+}
+.carte-temoignage-entreprise{
+    color: rgb(113, 11, 82);
+    margin: 0.5em;
+    font-size: large;
+}
+.carte-temoignage-fonction{
+    color: rgb(113, 11, 82);
+    font-size: large;
+}
+/*...............................................rèf.................................................................*/
+.gallery{
+    background-color: #87BB34;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    padding: 1em;
+    border-radius: 15px;
+}
+.gallery>img{
+    width: 14%;
+    height: auto;
+
+}
+/*................................................contact.............................................................*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color:  rgb(161, 162, 163) ;
+    opacity: 0.9;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    padding: 1em;
+    text-align: center;
+    width: 76%;
+}
+.button>input{
+    border: solid 1px #44A33D;
+    border-radius: 15px;
+    background-color: #44A33D;
+    color: white;
+    padding: 0.5em 3em 0.5em 3em;
+    font-size: 16px;
+}
+.gpFormulaire{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+label{
+    width: 26%;
+    text-align: right;
+}
+#email, #telephone, #nom, #region{
+    flex: 1;
+    margin-right: 20%;
+}
+#messages{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+}
+textarea{
+    width: 53%;
+    margin-right: 20%;
+}
+.coche{
+    display: flex;
+    gap: 10px    ;
+}

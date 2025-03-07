@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./Css/normalize.css" type="text/css">
+      
+      <link rel="stylesheet" href="./Css/styleresp.css" type="text/css">
+      <link rel="icon" href="./Images/favicon.ico">
+      <title>Contact</title>
+    </head>
+    <body>
+      <header>
+        <img src="Images/logo.jpeg" alt="Logo de la société AFPA"/>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="formationDWWM.html">La formation</a></li>
+            <li><a href="temoignages.html">Ils témoignent</a></li>
+            <li><a href="references.html">Nos références</a></li>
+            <li><a href="contact.html">Nous contacter</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Contactez-nous</h1>
+        <form action="" method="post">
+          <div class="gpFormulaire">
+            <label for="nom">Prénom nom</label>
+            <input type="text" name="nom" id="nom" required="required" tabindex="1" />
+          </div>
+          <div class="gpFormulaire">
+            <label for="email">Votre adresse mail</label>
+            <input type="email" placeholder="monadresse@gmail.com" name="email" id="email" required="required"
+              tabindex="2" />
+          </div>
+          <div class="gpFormulaire">
+              <label for="telephone">Votre téléphone</label>
+              <input type="tel" placeholder="06 07 08 09 10" name="telephone" id="telephone"  tabindex="3" />
+            </div>
+              <div class="coche">
+                <label>Vous êtes</label>
+                <div>
+                  <input type="radio" name="statut" id="de" value="DE" checked="checked" tabindex="4">
+                  <label for="de">Demandeur d'emploi</label>
+                </div>
+                <div>
+                  <input type="radio" name="statut" id="cif" value="CIF" tabindex="5">
+                  <label for="cif">Salarié en transition pro</label>
+                </div>
+                <div>
+                  <input type="radio" name="statut" id="au" value="AU">
+                  <label for="au">Autre</label>
+                </div>
+              </div>
+              <div class="coche">
+                <label>Vos modalités pédagogiques préférées</label>
+                <div>
+                  <input type="radio" name="modPedago" id="pres" value="pres" checked="checked">
+                  <label for="pres">Formation en présentiel</label>
+                </div>
+                <div>
+                  <input type="radio" name="modPedago" id="dist" value="dist">
+                  <label for="dist">100 % Distance</label>
+                </div>
+                <div>
+                  <input type="radio" name="modPedago" id="alt" value="alt">
+                  <label for="alt">Alternance</label>
+                </div>
+                <div>
+                  <input type="radio" name="modPedago" id="au" value="au">
+                  <label for="au">Pas de préférence</label>
+                </div>
+              </div>
+            <div class="gpFormulaire">
+              <label for="region">Vous êtes résident de la région</label>
+              <select id="region" name="region">
+                  <option value="">Choisissez votre région</option>
+                  <option value="AR">Auvergne-Rhône-Alpes</option>
+                  <option value="BG">Bourgogne-Franche-Comté</option>
+                  <option value="BR">Bretagne</option>
+                  <option value="CE">Centre-Val de Loire</option>
+                  <option value="CO">Corse</option>
+                  <option value="GE">Grand Est</option>
+                  <option value="IF">Hauts-de-France</option>
+                  <option value="HF">Île-de-France</option>
+                  <option value="NO">Normandie</option>
+                  <option value="NA">Nouvelle-Aquitainee</option>
+                  <option value="OC">Occitanie</option>
+                  <option value="PL">Pays de la Loire</option>
+                  <option value="PC">Provence-Alpes-Côte d'Azur</option>
+                  <option value="OC">Occitanie</option>
+                </select>
+              </div>
+          <div id="messages">
+            <label for="message">Votre message</label>
+            <textarea name="message" id="message" rows="10" placeholder="Votre message" required="required"
+              tabindex="12"></textarea>
+          </div>
+          <div class="button">
+            <input type="submit" tabindex="13" value="Envoyer"/>
+          </div>
+        </form>
+        
+      </main>
+    </body>
+  </html>
