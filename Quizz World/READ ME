@@ -1,0 +1,25 @@
+# Quizz World 🌍
+
+Une application interactive de quizz avec différents thèmes et niveaux de difficulté, développée en JavaScript/jQuery.
+
+## Fonctionnalités ✨
+
+- 🎯 Sélection parmi plusieurs quizz thématiques
+- 📊 3 niveaux de difficulté (Débutant, Confirmé, Expert)
+- 🖱️ Interface drag-and-drop pour répondre aux questions
+- 📝 Système de scoring avec résultats détaillés
+- 💡 Anecdotes et explications après chaque réponse
+- 🔄 Redémarrage facile après un quizz
+
+## Technologies utilisées 💻
+
+- **Frontend** : 
+  - JavaScript Vanilla
+  - jQuery (pour la manipulation DOM et les événements)
+  - HTML5/CSS3 (avec animations)
+- **Outils** :
+  - SweetAlert2 pour les boîtes de dialogue
+  - JSON pour le stockage des questions
+
+Ce projet a été réalisé en collaboration avec :
+    Massimiliano De Biasi (Oui vous ne revez pas, comme quoi il est pas que bon pour ouvrir des boosters Pokémon !)
