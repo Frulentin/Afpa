@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+ 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    </head>
+ 
+    <body>
+        <button id="buttonDebut" onclick="debutQuizz('${nom}', '${difficulte}')">Accéder a la réponse de la question 12</button>
+        <div id="resultat"></div> <!-- Pour afficher les résultats -->
+   
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- Assurez-vous d'avoir jQuery chargé -->
+   
+        <script>
+            function debutQuizz(nom, difficulte) {
+                // Appel AJAX quand le bouton est cliqué
+                $.ajax({
+                    method: "GET",
+                    url: "json/quizzweb.json",
+                    data: { name: nom, location: difficulte },
+                    statusCode: {
+                        404: function() {
+                            alert("Page not found");
+                        },
+                        200: function() {
+                            console.log("ok");
+                        }
+                    }
+                })
+                .done(function(msg) { // Si la requête réussit (code 200)
+                    // Stocker la réponse JSON dans une variable
+                    var jsonData = msg;
+       
+                    // Afficher le contenu du JSON pour débogage
+                    console.log(jsonData.quizz.confirmé[1].réponse);
+                    console.log(jsonData.quizz.confirmé[1].propositions[3])
+       
+                    // Exemple d'accès aux données dans l'objet JSON
+                    var index = 1; // Accéder à la question avec l'indice 1
+                    if (jsonData && jsonData.questions && jsonData.questions[index]) { // Vérifier que les données existent
+                        var questionData = jsonData.questions[index]; // Récupérer la question avec l'indice
+                        var reponse = questionData.réponse; // Accéder à la réponse
+       
+                        // Mettre à jour le DOM avec la réponse
+                        $('#resultat').html('<p>Réponse à l\'indice ' + index + ' : ' + reponse + '</p>');
+                    } else {
+                        $('#resultat').html('<p>Impossible de trouver la réponse à cet indice.</p>');
+                    }
+                });
+            }
+        </script>
+       
+       
+       
+    </body>
+   
+    </body>
+</html>

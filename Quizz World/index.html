@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.min.css " rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    
+    <main id="app-container">
+    </main>
+    <template id="template-quizz-selection">
+        <div id="quizz-container"></div>
+    </template>
+
+    <template id="template-quizz-box">
+        <div class="quizz-box">
+            <h3></h3>
+            <img src="" alt="">
+            <div class="levels"></div>
+        </div>
+    </template>
+
+    <template id="template-quizz-intro">
+        <div class="intro">
+            <h2></h2>
+            <p><span class="name"></span>, vous allez pouvoir démarrer ce Quizz !!!</p>
+            <img src="" alt="">
+            <button>Démarrer le Quizz</button>
+        </div>
+    </template>
+
+    <template id="template-quizz-screen">
+        <div class="quizz-screen">
+            <h2></h2>
+            <div>Score: <span id="score">0</span></div>
+            <div id="progress"></div>
+            <div id="question-box"></div>
+            <div id="answer-box">Dépose ta réponse ici</div>
+            <div id="info-box"></div>
+            <button id="next-btn" disabled>Suivant</button>
+        </div>
+    </template>
+
+    <template id="template-question">
+        <div class="question">
+            <h3></h3>
+            <div class="answers"></div>
+        </div>
+    </template>
+
+    <template id="template-results">
+        <div class="results">
+            <h2>Résultats</h2>
+            <p class="score-text"></p>
+            <p class="percentage"></p>
+            <button>Retour</button>
+        </div>
+    </template>
+</body>
+<script src="js/script.js"></script>
+</html>

@@ -1,0 +1,288 @@
+/* Styles généraux */
+@font-face {
+    font-family: "ImperialScript-Regular";
+    src: url(../font/ImperialScript-Regular.ttf);
+}
+
+body {
+    background-color: #4A91C5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+/* Conteneur principal */
+#app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Sélection des quizz */
+#quizz-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.quizz-box {
+    background-color: #F46E02;
+    border: 2px dashed black;
+    box-shadow: 10px 10px 1px black;
+    padding: 1.5em;
+    text-align: center;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    width: 300px;
+}
+
+.quizz-box:hover {
+    transform: scale(1.03);
+}
+
+.quizz-box h3 {
+    font-family: "ImperialScript-Regular";
+    color: white;
+    font-size: 2em;
+    margin: 0.5em 0;
+}
+
+.quizz-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+.levels {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    width: 100%;
+    font-family: "ImperialScript-Regular";
+    color: white;
+}
+
+.levels label {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Écran d'introduction */
+.intro {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    padding: 2em;
+}
+
+.intro .name {
+    color: black;
+    font-weight: bold;
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+}
+
+.intro img {
+    margin: 1em;
+    border-radius: 1em;
+    border: 5px solid white;
+    max-width: 300px;
+}
+
+.intro button {
+    background-color: #F46E02;
+    color: white;
+    padding: 0.8em 2em;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1em;
+}
+
+.intro button:hover {
+    background-color: #e66500;
+}
+
+/* Interface du quizz */
+.quizz-screen {
+    width: 100%;
+    max-width: 800px;
+    padding: 2em;
+}
+
+.quizz-screen h2 {
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+#score {
+    font-weight: bold;
+    color: #F46E02;
+    font-size: 1.2em;
+}
+
+#progress {
+    color: white;
+    margin: 0.5em 0 1.5em;
+    text-align: center;
+}
+
+#question-box {
+    margin-bottom: 1.5em;
+}
+
+.question h3 {
+    color: black;
+    margin-bottom: 1em;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 1.5em 0;
+}
+
+.answer {
+    padding: 1em;
+    background-color: #F46E02;
+    cursor: grab;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.answer:hover {
+    background: #F46E02;
+}
+
+.answer.dragging {
+    opacity: 0.6;
+    transform: scale(0.98);
+}
+
+#answer-box {
+    height: 80px;
+    border: 3px dashed black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5em 0;
+    font-size: 1.1em;
+    color: #666;
+    transition: all 0.3s;
+    background: #f9f9f9;
+}
+
+#answer-box.hover {
+    background: #f0f8ff;
+}
+
+#answer-box.right {
+    background: green;
+    color: black;
+}
+
+#answer-box.wrong {
+    background: red;
+    color: black;
+}
+
+#info-box {
+    font-style: italic;
+    color: white;
+    margin: 1em 0;
+    padding: 1em;
+    background: #F46E02;
+    display: none;
+}
+
+#next-btn {
+    background-color: #F46E02;
+    color: white;
+    padding: 0.8em 2em;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: block;
+    margin: 1.5em auto 0;
+}
+
+#next-btn:disabled {
+    cursor: not-allowed;
+}
+
+/* Bonne réponse */
+.answer[data-value].right {
+    background-color: green !important;
+    border-color: green !important;
+    color: black !important;
+    font-weight: bold;
+    animation: pulse 1s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Résultats */
+.results {
+    text-align: center;
+    padding: 2em;
+    border-radius: 1em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #2c3e50;
+}
+
+.results h2 {
+    margin-bottom: 1em;
+}
+
+.results p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.results button {
+    background-color: #F46E02;
+    color: white;
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 2em;
+}
+
+.results button:hover {
+    background-color: #e66500;
+}
